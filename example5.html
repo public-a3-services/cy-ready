@@ -66,36 +66,36 @@
         <h1>Event Registration Form</h1>
 
         <form id="eventRegistrationForm">
-            <label for="fullName" data-cy="label-fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" data-cy="input-fullName" required>
+            <label for="fullName" data-test-id="label-fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" data-test-id="input-fullName" required>
 
-            <label for="email" data-cy="label-email">Email Address:</label>
-            <input type="email" id="email" name="email" data-cy="input-email" required>
+            <label for="email" data-test-id="label-email">Email Address:</label>
+            <input type="email" id="email" name="email" data-test-id="input-email" required>
 
-            <label for="phone" data-cy="label-phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" data-cy="input-phone" required>
+            <label for="phone" data-test-id="label-phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" data-test-id="input-phone" required>
 
-            <label for="dob" data-cy="label-dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" data-cy="input-dob" required>
+            <label for="dob" data-test-id="label-dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" data-test-id="input-dob" required>
 
-            <label for="eventDate" data-cy="label-eventDate">Event Date:</label>
-            <input type="date" id="eventDate" name="eventDate" data-cy="input-eventDate" required>
+            <label for="eventDate" data-test-id="label-eventDate">Event Date:</label>
+            <input type="date" id="eventDate" name="eventDate" data-test-id="input-eventDate" required>
 
-            <label for="gender" data-cy="label-gender">Gender:</label>
+            <label for="gender" data-test-id="label-gender">Gender:</label>
             <div class="radio-group">
-                <input type="radio" id="genderMale" name="gender" value="Male" data-cy="gender-male" required><label for="genderMale">Male</label>
-                <input type="radio" id="genderFemale" name="gender" value="Female" data-cy="gender-female"><label for="genderFemale">Female</label>
-                <input type="radio" id="genderOther" name="gender" value="Other" data-cy="gender-other"><label for="genderOther">Other</label>
+                <input type="radio" id="genderMale" name="gender" value="Male" data-test-id="gender-male" required><label for="genderMale">Male</label>
+                <input type="radio" id="genderFemale" name="gender" value="Female" data-test-id="gender-female"><label for="genderFemale">Female</label>
+                <input type="radio" id="genderOther" name="gender" value="Other" data-test-id="gender-other"><label for="genderOther">Other</label>
             </div>
 
-            <label for="attendance" data-cy="label-attendance">Will you attend the event?</label>
+            <label for="attendance" data-test-id="label-attendance">Will you attend the event?</label>
             <div class="radio-group">
-                <input type="radio" id="attendYes" name="attendance" value="Yes" data-cy="attend-yes" required><label for="attendYes">Yes</label>
-                <input type="radio" id="attendNo" name="attendance" value="No" data-cy="attend-no"><label for="attendNo">No</label>
+                <input type="radio" id="attendYes" name="attendance" value="Yes" data-test-id="attend-yes" required><label for="attendYes">Yes</label>
+                <input type="radio" id="attendNo" name="attendance" value="No" data-test-id="attend-no"><label for="attendNo">No</label>
             </div>
 
-            <label for="dietaryPreferences" data-cy="label-dietaryPreferences">Dietary Preferences:</label>
-            <select id="dietaryPreferences" name="dietaryPreferences" data-cy="input-dietaryPreferences">
+            <label for="dietaryPreferences" data-test-id="label-dietaryPreferences">Dietary Preferences:</label>
+            <select id="dietaryPreferences" name="dietaryPreferences" data-test-id="input-dietaryPreferences">
                 <option value="None">None</option>
                 <option value="Vegetarian">Vegetarian</option>
                 <option value="Vegan">Vegan</option>
@@ -104,11 +104,11 @@
                 <option value="Kosher">Kosher</option>
             </select>
 
-            <label for="specialRequests" data-cy="label-specialRequests">Special Requests:</label>
-            <textarea id="specialRequests" name="specialRequests" data-cy="input-specialRequests" placeholder="Any special requests (e.g., accessibility needs)"></textarea>
+            <label for="specialRequests" data-test-id="label-specialRequests">Special Requests:</label>
+            <textarea id="specialRequests" name="specialRequests" data-test-id="input-specialRequests" placeholder="Any special requests (e.g., accessibility needs)"></textarea>
 
-            <label for="shirtSize" data-cy="label-shirtSize">T-shirt Size:</label>
-            <select id="shirtSize" name="shirtSize" data-cy="input-shirtSize">
+            <label for="shirtSize" data-test-id="label-shirtSize">T-shirt Size:</label>
+            <select id="shirtSize" name="shirtSize" data-test-id="input-shirtSize">
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
@@ -116,15 +116,15 @@
                 <option value="XXL">XXL</option>
             </select>
 
-            <label for="uploadPhoto" data-cy="label-uploadPhoto">Upload a Photo (Optional):</label>
-            <input type="file" id="uploadPhoto" name="uploadPhoto" data-cy="input-uploadPhoto">
+            <label for="uploadPhoto" data-test-id="label-uploadPhoto">Upload a Photo (Optional):</label>
+            <input type="file" id="uploadPhoto" name="uploadPhoto" data-test-id="input-uploadPhoto">
 
             <label class="checkbox-group">
-                <input type="checkbox" id="newsletter" name="newsletter" data-cy="newsletter" required>
+                <input type="checkbox" id="newsletter" name="newsletter" data-test-id="newsletter" required>
                 I agree to receive event updates and newsletters.
             </label>
 
-            <button type="submit" class="submit-btn" data-cy="submit-button">Register Now</button>
+            <button type="submit" class="submit-btn" data-test-id="submit-button">Register Now</button>
         </form>
     </div>
 

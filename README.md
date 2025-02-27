@@ -1,4 +1,4 @@
-# cy-ready
+# data-test-id
 
 ## Chrome bookmarklet
 
@@ -7,7 +7,7 @@
 1. Create a new bookmark:
     - Right-click on the bookmarks bar and select `Add page`.
 2. Set the name and URL:
-    - `Name`: For example, "Check data-cy"
+    - `Name`: For example, "data-test-id"
     - `URL`: Paste the following code:
 
 ```javascript
@@ -16,16 +16,16 @@ javascript:(function() {
 
   const elements = document.querySelectorAll(controlElements.join(', '));
   const allElements = document.querySelectorAll('*');
-  let missingDataCy = [];
-  let hasDataCy = [];
-  let otherWithDataCy = [];
+  let missingDataTestId = [];
+  let hasDataTestId = [];
+  let otherWithDataTestId = [];
 
   console.log('%c Control elements:', 'font-size: 20px; font-weight: bold; color: purple;');
   console.log(controlElements);
 
   elements.forEach(el => {
-    if (!el.hasAttribute('data-cy')) {
-      missingDataCy.push({
+    if (!el.hasAttribute('data-test-id')) {
+      missingDataTestId.push({
         'tag': el.tagName.toLowerCase(),
         'id': el.id || '-',
         'class': el.className || '-',
@@ -33,40 +33,40 @@ javascript:(function() {
         'element': el
       });
     } else {
-      hasDataCy.push({
+      hasDataTestId.push({
         'tag': el.tagName.toLowerCase(),
         'id': el.id || '-',
         'class': el.className || '-',
         'text': el.innerText.trim().substring(0, 50) || '-',
-        'data-cy': el.getAttribute('data-cy'),
+        'data-test-id': el.getAttribute('data-test-id'),
         'element': el
       });
     }
   });
 
   Array.from(allElements).forEach(el => {
-    if (el.hasAttribute('data-cy')) {
-      if (!hasDataCy.some(item => item.element === el) && !Array.from(elements).includes(el)) {
-        otherWithDataCy.push({
+    if (el.hasAttribute('data-test-id')) {
+      if (!hasDataTestId.some(item => item.element === el) && !Array.from(elements).includes(el)) {
+        otherWithDataTestId.push({
           'tag': el.tagName.toLowerCase(),
           'id': el.id || '-',
           'class': el.className || '-',
           'text': el.innerText.trim().substring(0, 50) || '-',
-          'data-cy': el.getAttribute('data-cy'),
+          'data-test-id': el.getAttribute('data-test-id'),
           'element': el
         });
       }
     }
   });
 
-  console.log(`%c ${missingDataCy.length} Missing control data-cy selector:`, 'font-size: 20px; font-weight: bold; color: red;');
-  console.table(missingDataCy);
+  console.log(`%c ${missingDataTestId.length} Missing control data-test-id selector:`, 'font-size: 20px; font-weight: bold; color: red;');
+  console.table(missingDataTestId);
 
-  console.log(`%c ${hasDataCy.length} Control elements with data-cy selector:`, 'font-size: 20px; font-weight: bold; color: green;');
-  console.table(hasDataCy);
+  console.log(`%c ${hasDataTestId.length} Control elements with data-test-id selector:`, 'font-size: 20px; font-weight: bold; color: green;');
+  console.table(hasDataTestId);
 
-  console.log(`%c ${otherWithDataCy.length} Other elements with data-cy selector:`, 'font-size: 20px; font-weight: bold; color: blue;');
-  console.table(otherWithDataCy);
+  console.log(`%c ${otherWithDataTestId.length} Other elements with data-test-id selector:`, 'font-size: 20px; font-weight: bold; color: blue;');
+  console.table(otherWithDataTestId);
 })();
 ```
 
