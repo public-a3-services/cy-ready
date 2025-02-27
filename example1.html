@@ -4,30 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Person Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1em;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Enter Person Details</h1>
-    
-    <form id="personForm">
-        <label for="firstName" data-cy="label-firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" data-cy="input-firstName" required><br><br>
+    <div>
+        <h1>Enter Person Details</h1>
+        <form id="personForm">
+            <div class="form-group">
+                <label for="firstName" data-cy="label-firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" data-cy="input-firstName" required>
+            </div>
 
-        <label for="lastName" data-cy="label-lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" data-cy="input-lastName" required><br><br>
+            <div class="form-group">
+                <label for="lastName" data-cy="label-lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" data-cy="input-lastName" required>
+            </div>
 
-        <label for="email" data-cy="label-email">Email:</label>
-        <input type="email" id="email" name="email" data-cy="input-email" required><br><br>
+            <div class="form-group">
+                <label for="email" data-cy="label-email">Email:</label>
+                <input type="email" id="email" name="email" data-cy="input-email" required>
+            </div>
 
-        <label for="phone" data-cy="label-phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" data-cy="input-phone" required><br><br>
+            <div class="form-group">
+                <label for="phone" data-cy="label-phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" data-cy="input-phone" required>
+            </div>
 
-        <label for="dob" data-cy="label-dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" data-cy="input-dob" required><br><br>
+            <div class="form-group">
+                <label for="dob" data-cy="label-dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" data-cy="input-dob" required>
+            </div>
 
-        <label for="address" data-cy="label-address">Address:</label>
-        <input type="text" id="address" name="address" data-cy="input-address" required><br><br>
+            <div class="form-group">
+                <label for="address" data-cy="label-address">Address:</label>
+                <input type="text" id="address" name="address" data-cy="input-address" required>
+            </div>
 
-        <button type="submit" data-cy="submit-button">Submit</button>
-    </form>
+            <button type="submit" data-cy="submit-button">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

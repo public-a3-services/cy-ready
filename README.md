@@ -13,22 +13,35 @@
 ```javascript
 javascript:(function() {
   const elements = document.querySelectorAll('button, input, a, select, textarea, form');
-  let results = [];
+  let missingDataCy = [];
+  let hasDataCy = [];
 
   elements.forEach(el => {
     if (!el.hasAttribute('data-cy')) {
-      results.push({
+      missingDataCy.push({
         'Tag': el.tagName.toLowerCase(),
         'ID': el.id || '-',
         'Class': el.className || '-',
         'Text': el.innerText.trim().substring(0, 50) || '-',
         'Element': el
       });
+    } else {
+      hasDataCy.push({
+        'Tag': el.tagName.toLowerCase(),
+        'ID': el.id || '-',
+        'Class': el.className || '-',
+        'Text': el.innerText.trim().substring(0, 50) || '-',
+        'Data-Cy': el.getAttribute('data-cy'),
+        'Element': el
+      });
     }
   });
 
   console.log('%cMissing data-cy selectors:', 'font-size: 20px; font-weight: bold; color: red;');
-  console.table(results);
+  console.table(missingDataCy);
+
+  console.log('%cElements with data-cy selectors:', 'font-size: 20px; font-weight: bold; color: green;');
+  console.table(hasDataCy);
 })();
 ```
 
