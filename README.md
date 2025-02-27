@@ -5,7 +5,7 @@
 ### Procedure:
 
 1. Create a new bookmark:
-    - Right-click on the bookmarks bar and select "Add page."
+    - Right-click on the bookmarks bar and select `Add page`.
 2. Set the name and URL:
     - `Name`: For example, "Check data-cy"
     - `URL`: Paste the following code:
@@ -19,20 +19,20 @@ javascript:(function() {
   elements.forEach(el => {
     if (!el.hasAttribute('data-cy')) {
       missingDataCy.push({
-        'Tag': el.tagName.toLowerCase(),
-        'ID': el.id || '-',
-        'Class': el.className || '-',
-        'Text': el.innerText.trim().substring(0, 50) || '-',
-        'Element': el
+        'tag': el.tagName.toLowerCase(),
+        'id': el.id || '-',
+        'class': el.className || '-',
+        'text': el.innerText.trim().substring(0, 50) || '-',
+        'element': el
       });
     } else {
       hasDataCy.push({
-        'Tag': el.tagName.toLowerCase(),
-        'ID': el.id || '-',
-        'Class': el.className || '-',
-        'Text': el.innerText.trim().substring(0, 50) || '-',
-        'Data-Cy': el.getAttribute('data-cy'),
-        'Element': el
+        'tag': el.tagName.toLowerCase(),
+        'id': el.id || '-',
+        'class': el.className || '-',
+        'text': el.innerText.trim().substring(0, 50) || '-',
+        'data-cy': el.getAttribute('data-cy'),
+        'element': el
       });
     }
   });
