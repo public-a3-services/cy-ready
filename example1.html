@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Details Form</title>
+</head>
+<body>
+    <h1>Enter Person Details</h1>
+    
+    <form id="personForm">
+        <label for="firstName" data-cy="label-firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" data-cy="input-firstName" required><br><br>
+
+        <label for="lastName" data-cy="label-lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" data-cy="input-lastName" required><br><br>
+
+        <label for="email" data-cy="label-email">Email:</label>
+        <input type="email" id="email" name="email" data-cy="input-email" required><br><br>
+
+        <label for="phone" data-cy="label-phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" data-cy="input-phone" required><br><br>
+
+        <label for="dob" data-cy="label-dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" data-cy="input-dob" required><br><br>
+
+        <label for="address" data-cy="label-address">Address:</label>
+        <input type="text" id="address" name="address" data-cy="input-address" required><br><br>
+
+        <button type="submit" data-cy="submit-button">Submit</button>
+    </form>
+</body>
+</html>
