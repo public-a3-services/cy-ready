@@ -37,10 +37,10 @@ javascript:(function() {
     }
   });
 
-  console.log('%c Missing data-cy selectors:', 'font-size: 20px; font-weight: bold; color: red;');
+  console.log(`%c ${missingDataCy.length} Missing data-cy selectors:`, 'font-size: 20px; font-weight: bold; color: red;');
   console.table(missingDataCy);
 
-  console.log('%c Elements with data-cy selectors:', 'font-size: 20px; font-weight: bold; color: green;');
+  console.log(`%c ${hasDataCy.length} Elements with data-cy selectors:`, 'font-size: 20px; font-weight: bold; color: green;');
   console.table(hasDataCy);
 })();
 ```
