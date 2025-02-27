@@ -20,9 +20,6 @@ javascript:(function() {
   let hasDataTestId = [];
   let otherWithDataTestId = [];
 
-  console.log('%c Control elements:', 'font-size: 20px; font-weight: bold; color: purple;');
-  console.log(controlElements);
-
   elements.forEach(el => {
     if (!el.hasAttribute('data-test-id')) {
       missingDataTestId.push({
@@ -59,14 +56,21 @@ javascript:(function() {
     }
   });
 
-  console.log(`%c ${missingDataTestId.length} Missing control data-test-id selector:`, 'font-size: 20px; font-weight: bold; color: red;');
+  console.groupCollapsed('%c Control elements:', 'font-size: 20px; font-weight: bold; color: purple;');
+  console.log(controlElements);
+  console.groupEnd();
+
+  console.groupCollapsed(`%c Missing control data-test-id selector (${missingDataTestId.length})`, 'font-size: 16px; font-weight: bold; color: red;');
   console.table(missingDataTestId);
+  console.groupEnd();
 
-  console.log(`%c ${hasDataTestId.length} Control elements with data-test-id selector:`, 'font-size: 20px; font-weight: bold; color: green;');
+  console.groupCollapsed(`%c Control elements with data-test-id selector (${hasDataTestId.length})`, 'font-size: 16px; font-weight: bold; color: green;');
   console.table(hasDataTestId);
+  console.groupEnd();
 
-  console.log(`%c ${otherWithDataTestId.length} Other elements with data-test-id selector:`, 'font-size: 20px; font-weight: bold; color: blue;');
+  console.groupCollapsed(`%c Other elements with data-test-id selector (${otherWithDataTestId.length})`, 'font-size: 16px; font-weight: bold; color: blue;');
   console.table(otherWithDataTestId);
+  console.groupEnd();
 })();
 ```
 
